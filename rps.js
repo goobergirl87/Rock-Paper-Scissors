@@ -12,3 +12,6 @@ function getComputerChoice() {
       return 'scissors';
     }
   }
+
+let playerPoints = 0;
+let computerPoints = 0;
