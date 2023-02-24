@@ -49,3 +49,6 @@ function playRound(playerSelection, computerSelection) {
         return "Typo?!";
     }
 }
+
+function game () {
+    }
