@@ -56,8 +56,9 @@ function game () {
         let playerSelection = prompt ("Choose rock, paper or scissors").toLowerCase(); 
 
         playRound ()
-        
+
         console.log(playRound(playerSelection, computerSelection));
         console.log('Player ',playerPoints,', Computer ',computerPoints)
     }
+    console.log('FINAL SCORE Player ',playerPoints,', Computer ',computerPoints)
 }
