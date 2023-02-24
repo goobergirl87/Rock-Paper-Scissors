@@ -61,4 +61,13 @@ function game () {
         console.log('Player ',playerPoints,', Computer ',computerPoints)
     }
     console.log('FINAL SCORE Player ',playerPoints,', Computer ',computerPoints)
+
+    if (computerPoints > playerPoints) {
+        return "Computer wins this game";
+  
+      } else if (playerPoints > computerPoints) {
+          return "You win this game!";
+      
+      } else (playerPoints === computerPoints) 
+          return "Tie";
 }
