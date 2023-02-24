@@ -71,3 +71,5 @@ function game () {
       } else (playerPoints === computerPoints) 
           return "Tie";
 }
+
+game ()
