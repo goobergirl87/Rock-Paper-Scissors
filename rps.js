@@ -13,63 +13,129 @@ function getComputerChoice() {
     }
 }
 
-const computerSelection = getComputerChoice();
 let playerPoints = 0;
 let computerPoints = 0;
 
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "scissors") {
-        playerPoints += 1
-        return "rock beats scissors, you win!";
+const container2 = document.querySelector('#container2');
 
-      } else if (playerSelection === "rock" && computerSelection === "paper") {
-        computerPoints += 1
-        return "paper beats rock, you lose!";   
+const roundResult = document.createElement('div');
+roundResult.classList.add('roundResult');
+container2.appendChild(roundResult);
+roundResult.setAttribute('style','font-family: monospace; font-size: 30px; color:rgb(230, 0, 126); margin: 20px');
 
-      } else if  (playerSelection === "scissors" && computerSelection === "rock") {
-        computerPoints += 1
-        return "rock beats scissors, you lose!";  
-        
-      } else if  (playerSelection === "scissors" && computerSelection === "paper") {
-        playerPoints += 1
-        return "paper beats scissors, you win!";      
-        
-      }  else if  (playerSelection === "paper" && computerSelection === "rock") {
-        playerPoints += 1
-        return "paper beats rock, you win!";  
-        
-      }  else if  (playerSelection === "paper" && computerSelection === "scissors") {
-        computerPoints += 1
-        return "scissors beat paper, you lose!";
-        
-      }  else if (playerSelection === computerSelection) {
-        return "Equal! Play again!";
+const score = document.createElement('div');
+score.classList.add('score');
+container2.appendChild(score);
+score.setAttribute('style','font-family: monospace; font-size: 20px; color:blanchedalmond; margin: 20px;');Set 
 
-      }  else {
-        return "Typo?!";
-    }
-}
+const finish = document.createElement('div');
+finish.classList.add('finish');
+container2.appendChild(finish);
+finish.setAttribute('style','font-family: monospace; font-size: 20px; color:blanchedalmond; background-color: rgb(230, 0, 126); margin: 20px');
 
-function game () {
-    for(let i = 0; i < 5; i++) {
+const playerSelection1 = document.querySelectorAll('rock');
+rock.addEventListener('click', getComputerChoice)
+rock.addEventListener('click', rockSelection)
 
-        let playerSelection = prompt ("Choose rock, paper or scissors").toLowerCase(); 
+function rockSelection () {
 
-        playRound ()
+  let computerSelection = getComputerChoice();
 
-        console.log(playRound(playerSelection, computerSelection));
-        console.log('Player ',playerPoints,', Computer ',computerPoints)
-    }
-    console.log('FINAL SCORE Player ',playerPoints,', Computer ',computerPoints)
+  if (computerSelection === "scissors") {
+    playerPoints += 1
+    roundResult.textContent = "rock beats scissors, you win!";
 
-    if (computerPoints > playerPoints) {
-        return "Computer wins this game";
+  } else if (computerSelection === "paper") {
+    computerPoints += 1
+    roundResult.textContent = "paper beats rock, you lose!"; 
+
+  }  else {
+    roundResult.textContent = "Equal! Play again!";
+
+  }    
+  score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
+
+  winner()
+    
+};
+
+
+const playerSelection2 = document.querySelectorAll('paper');
+paper.addEventListener('click', getComputerChoice)
+paper.addEventListener('click', paperSelection)
+
+function paperSelection () {
+
+  let computerSelection = getComputerChoice();
+
+  if  (computerSelection === "rock") {
+    playerPoints += 1
+    roundResult.textContent = "paper beats rock, you win!";
+
+}  else if  (computerSelection === "scissors") {
+    computerPoints += 1
+    roundResult.textContent = "scissors beat paper, you lose!";
+
+  }  else {
+    roundResult.textContent = "Equal! Play again!";
+  }
+  score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
+
+  winner()
   
-      } else if (playerPoints > computerPoints) {
-          return "You win this game!";
-      
-      } else (playerPoints === computerPoints) 
-          return "Tie";
-}
+};
 
-game ()
+const playerSelection3 = document.querySelectorAll('scissors');
+scissors.addEventListener('click', getComputerChoice)
+scissors.addEventListener('click', scissorsSelection)
+
+function scissorsSelection () {
+
+  let computerSelection = getComputerChoice();
+ 
+   if  (computerSelection === "rock") {
+     computerPoints += 1
+     roundResult.textContent = "rock beats scissors, you lose!";
+ 
+ } else if  (computerSelection === "paper") {
+     playerPoints += 1
+     roundResult.textContent = "paper beats scissors, you win!";
+ 
+   }  else {
+    roundResult.textContent = "Equal! Play again!";
+  }
+
+  score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints;  
+
+  winner()
+    
+ };
+
+ function winner (){
+  if (computerPoints === 5) {
+    finish.textContent = "computer wins"; 
+    rock.removeEventListener('click', getComputerChoice);
+    rock.removeEventListener('click', rockSelection);
+    paper.removeEventListener('click', getComputerChoice);
+    paper.removeEventListener('click', paperSelection);
+    scissors.removeEventListener('click', getComputerChoice);
+    scissors.removeEventListener('click', scissorsSelection);
+  }
+  else if (playerPoints === 5) {
+    finish.textContent = "you win";
+    rock.removeEventListener('click', getComputerChoice);
+    rock.removeEventListener('click', rockSelection);
+    paper.removeEventListener('click', getComputerChoice);
+    paper.removeEventListener('click', paperSelection);
+    scissors.removeEventListener('click', getComputerChoice);
+    scissors.removeEventListener('click', scissorsSelection); 
+
+  } else {
+  }
+};
+
+const startOver = document.querySelectorAll('startAgain');
+startAgain.addEventListener('click', function(){
+  window.location.reload();
+  return false;
+});
