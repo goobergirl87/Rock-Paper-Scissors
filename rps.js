@@ -13,15 +13,66 @@ function getComputerChoice() {
     }
 }
 
-const computerSelection = getComputerChoice();
 let playerPoints = 0;
 let computerPoints = 0;
 
 const playerSelection1 = document.querySelectorAll('rock');
 
+function rockSelection () {
+
+  let computerSelection = getComputerChoice();
+
+  if (computerSelection === "scissors") {
+    playerPoints += 1
+    return "rock beats scissors, you win!";
+
+  } else if (computerSelection === "paper") {
+    computerPoints += 1
+    return "paper beats rock, you lose!"; 
+
+  }  else {
+    return "Equal! Play again!";
+    
+}};
+
+
 const playerSelection2 = document.querySelectorAll('paper');
 
+function paperSelection () {
+
+  let computerSelection = getComputerChoice();
+
+  if  (computerSelection === "rock") {
+    playerPoints += 1
+    return "paper beats rock, you win!";
+
+}  else if  (computerSelection === "scissors") {
+    computerPoints += 1
+    return "scissors beat paper, you lose!";
+
+  }  else {
+    return "Equal! Play again!";
+  
+}};
+
 const playerSelection3 = document.querySelectorAll('scissors');
+
+function scissorsSelection () {
+
+  let computerSelection = getComputerChoice();
+ 
+   if  (computerSelection === "rock") {
+     computerPoints += 1
+     return "rock beats scissors, you lose!";
+ 
+ } else if  (computerSelection === "paper") {
+     playerPoints += 1
+     return "paper beats scissors, you win!";
+ 
+   }  else {
+    return "Equal! Play again!";
+ }};
+ 
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "rock" && computerSelection === "scissors") {
