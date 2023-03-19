@@ -89,3 +89,14 @@ function scissorsSelection () {
   score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints;  
     
  }};
+
+ function winner (){
+  if (computerPoints === 5) {
+    finish.textContent = "computer wins"; 
+  }
+  else if (playerPoints === 5) {
+    finish.textContent = "you win"; 
+
+  } else {
+  }
+};
