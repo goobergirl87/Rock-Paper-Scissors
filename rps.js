@@ -26,6 +26,7 @@ roundResult.setAttribute('style','font-family: monospace; font-size: 30px; color
 const score = document.createElement('div');
 score.classList.add('score');
 container2.appendChild(score);
+score.setAttribute('style','font-family: monospace; font-size: 20px; color:blanchedalmond; margin: 20px;');Set 
 
 const finish = document.createElement('div');
 finish.classList.add('finish');
