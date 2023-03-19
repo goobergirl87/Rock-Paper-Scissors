@@ -26,6 +26,10 @@ const score = document.createElement('div');
 score.classList.add('score');
 container2.appendChild(score);
 
+const finish = document.createElement('div');
+finish.classList.add('finish');
+container2.appendChild(finish);
+
 const playerSelection1 = document.querySelectorAll('rock');
 
 function rockSelection () {
