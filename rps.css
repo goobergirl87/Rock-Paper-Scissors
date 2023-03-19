@@ -67,3 +67,14 @@ h3 {
 img {
     height: 250px;
 }
+
+#startAgain {
+    font-size: 20px;
+    color:rgb(230, 0, 126);
+    border: none;
+    border-radius: 5px;
+    background-color:blanchedalmond;
+    padding: 5px 10px;
+    width: 70px;
+    align-self: center;
+}
