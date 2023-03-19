@@ -52,11 +52,12 @@ function rockSelection () {
   }  else {
     roundResult.textContent = "Equal! Play again!";
 
+  }    
   score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
 
   winner()
     
-}};
+};
 
 
 const playerSelection2 = document.querySelectorAll('paper');
@@ -77,12 +78,12 @@ function paperSelection () {
 
   }  else {
     roundResult.textContent = "Equal! Play again!";
-
+  }
   score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
 
   winner()
   
-}};
+};
 
 const playerSelection3 = document.querySelectorAll('scissors');
 scissors.addEventListener('click', getComputerChoice)
@@ -102,12 +103,13 @@ function scissorsSelection () {
  
    }  else {
     roundResult.textContent = "Equal! Play again!";
+  }
 
   score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints;  
 
   winner()
     
- }};
+ };
 
  function winner (){
   if (computerPoints === 5) {
