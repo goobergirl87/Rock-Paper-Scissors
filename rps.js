@@ -44,6 +44,8 @@ function rockSelection () {
     roundResult.textContent = "Equal! Play again!";
 
   score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
+
+  winner()
     
 }};
 
@@ -66,6 +68,8 @@ function paperSelection () {
     roundResult.textContent = "Equal! Play again!";
 
   score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
+
+  winner()
   
 }};
 
@@ -87,6 +91,8 @@ function scissorsSelection () {
     roundResult.textContent = "Equal! Play again!";
 
   score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints;  
+
+  winner()
     
  }};
 
