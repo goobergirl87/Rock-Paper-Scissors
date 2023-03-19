@@ -116,3 +116,9 @@ function scissorsSelection () {
   } else {
   }
 };
+
+const startOver = document.querySelectorAll('startAgain');
+startAgain.addEventListener('click', function(){
+  window.location.reload();
+  return false;
+});
