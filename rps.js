@@ -31,6 +31,8 @@ finish.classList.add('finish');
 container2.appendChild(finish);
 
 const playerSelection1 = document.querySelectorAll('rock');
+rock.addEventListener('click', getComputerChoice)
+rock.addEventListener('click', rockSelection)
 
 function rockSelection () {
 
@@ -55,6 +57,8 @@ function rockSelection () {
 
 
 const playerSelection2 = document.querySelectorAll('paper');
+paper.addEventListener('click', getComputerChoice)
+paper.addEventListener('click', paperSelection)
 
 function paperSelection () {
 
@@ -78,6 +82,8 @@ function paperSelection () {
 }};
 
 const playerSelection3 = document.querySelectorAll('scissors');
+scissors.addEventListener('click', getComputerChoice)
+scissors.addEventListener('click', scissorsSelection)
 
 function scissorsSelection () {
 
