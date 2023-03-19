@@ -16,6 +16,12 @@ function getComputerChoice() {
 let playerPoints = 0;
 let computerPoints = 0;
 
+const container2 = document.querySelector('#container2');
+
+const roundResult = document.createElement('div');
+roundResult.classList.add('roundResult');
+container2.appendChild(roundResult);
+
 const playerSelection1 = document.querySelectorAll('rock');
 
 function rockSelection () {
@@ -72,38 +78,3 @@ function scissorsSelection () {
    }  else {
     return "Equal! Play again!";
  }};
- 
-
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "scissors") {
-        playerPoints += 1
-        return "rock beats scissors, you win!";
-
-      } else if (playerSelection === "rock" && computerSelection === "paper") {
-        computerPoints += 1
-        return "paper beats rock, you lose!";   
-
-      } else if  (playerSelection === "scissors" && computerSelection === "rock") {
-        computerPoints += 1
-        return "rock beats scissors, you lose!";  
-        
-      } else if  (playerSelection === "scissors" && computerSelection === "paper") {
-        playerPoints += 1
-        return "paper beats scissors, you win!";      
-        
-      }  else if  (playerSelection === "paper" && computerSelection === "rock") {
-        playerPoints += 1
-        return "paper beats rock, you win!";  
-        
-      }  else if  (playerSelection === "paper" && computerSelection === "scissors") {
-        computerPoints += 1
-        return "scissors beat paper, you lose!";
-        
-      }  else if (playerSelection === computerSelection) {
-        return "Equal! Play again!";
-
-      }  else {
-        return "Typo?!";
-    }
-}
-
