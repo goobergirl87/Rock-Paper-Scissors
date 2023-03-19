@@ -22,6 +22,10 @@ const roundResult = document.createElement('div');
 roundResult.classList.add('roundResult');
 container2.appendChild(roundResult);
 
+const score = document.createElement('div');
+score.classList.add('score');
+container2.appendChild(score);
+
 const playerSelection1 = document.querySelectorAll('rock');
 
 function rockSelection () {
@@ -38,6 +42,8 @@ function rockSelection () {
 
   }  else {
     roundResult.textContent = "Equal! Play again!";
+
+  score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
     
 }};
 
@@ -58,6 +64,8 @@ function paperSelection () {
 
   }  else {
     roundResult.textContent = "Equal! Play again!";
+
+  score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints; 
   
 }};
 
@@ -77,4 +85,7 @@ function scissorsSelection () {
  
    }  else {
     roundResult.textContent = "Equal! Play again!";
+
+  score.textContent = "computer points " + computerPoints  + " - player points " + playerPoints;  
+    
  }};
