@@ -21,3 +21,21 @@ h3 {
     color:blanchedalmond;
     margin: -30px 0px 0px 0px;
 }
+
+#rock {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+  }
+
+#paper {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+#scissors {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+  }
