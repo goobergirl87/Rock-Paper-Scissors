@@ -17,6 +17,12 @@ const computerSelection = getComputerChoice();
 let playerPoints = 0;
 let computerPoints = 0;
 
+const playerSelection1 = document.querySelectorAll('rock');
+
+const playerSelection2 = document.querySelectorAll('paper');
+
+const playerSelection3 = document.querySelectorAll('scissors');
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === "rock" && computerSelection === "scissors") {
         playerPoints += 1
@@ -50,26 +56,3 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game () {
-    for(let i = 0; i < 5; i++) {
-
-        let playerSelection = prompt ("Choose rock, paper or scissors").toLowerCase(); 
-
-        playRound ()
-
-        console.log(playRound(playerSelection, computerSelection));
-        console.log('Player ',playerPoints,', Computer ',computerPoints)
-    }
-    console.log('FINAL SCORE Player ',playerPoints,', Computer ',computerPoints)
-
-    if (computerPoints > playerPoints) {
-        return "Computer wins this game";
-  
-      } else if (playerPoints > computerPoints) {
-          return "You win this game!";
-      
-      } else (playerPoints === computerPoints) 
-          return "Tie";
-}
-
-game ()
