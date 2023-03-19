@@ -109,9 +109,21 @@ function scissorsSelection () {
  function winner (){
   if (computerPoints === 5) {
     finish.textContent = "computer wins"; 
+    rock.removeEventListener('click', getComputerChoice);
+    rock.removeEventListener('click', rockSelection);
+    paper.removeEventListener('click', getComputerChoice);
+    paper.removeEventListener('click', paperSelection);
+    scissors.removeEventListener('click', getComputerChoice);
+    scissors.removeEventListener('click', scissorsSelection);
   }
   else if (playerPoints === 5) {
-    finish.textContent = "you win"; 
+    finish.textContent = "you win";
+    rock.removeEventListener('click', getComputerChoice);
+    rock.removeEventListener('click', rockSelection);
+    paper.removeEventListener('click', getComputerChoice);
+    paper.removeEventListener('click', paperSelection);
+    scissors.removeEventListener('click', getComputerChoice);
+    scissors.removeEventListener('click', scissorsSelection); 
 
   } else {
   }
