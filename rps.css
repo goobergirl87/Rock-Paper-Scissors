@@ -78,3 +78,9 @@ img {
     width: 70px;
     align-self: center;
 }
+
+#startAgain:hover {
+    color:blanchedalmond;
+    background-color: rgb(230, 0, 126);
+    border: none;
+}
