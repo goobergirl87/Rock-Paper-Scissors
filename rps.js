@@ -30,14 +30,14 @@ function rockSelection () {
 
   if (computerSelection === "scissors") {
     playerPoints += 1
-    return "rock beats scissors, you win!";
+    roundResult.textContent = "rock beats scissors, you win!";
 
   } else if (computerSelection === "paper") {
     computerPoints += 1
-    return "paper beats rock, you lose!"; 
+    roundResult.textContent = "paper beats rock, you lose!"; 
 
   }  else {
-    return "Equal! Play again!";
+    roundResult.textContent = "Equal! Play again!";
     
 }};
 
@@ -50,14 +50,14 @@ function paperSelection () {
 
   if  (computerSelection === "rock") {
     playerPoints += 1
-    return "paper beats rock, you win!";
+    roundResult.textContent = "paper beats rock, you win!";
 
 }  else if  (computerSelection === "scissors") {
     computerPoints += 1
-    return "scissors beat paper, you lose!";
+    roundResult.textContent = "scissors beat paper, you lose!";
 
   }  else {
-    return "Equal! Play again!";
+    roundResult.textContent = "Equal! Play again!";
   
 }};
 
@@ -69,12 +69,12 @@ function scissorsSelection () {
  
    if  (computerSelection === "rock") {
      computerPoints += 1
-     return "rock beats scissors, you lose!";
+     roundResult.textContent = "rock beats scissors, you lose!";
  
  } else if  (computerSelection === "paper") {
      playerPoints += 1
-     return "paper beats scissors, you win!";
+     roundResult.textContent = "paper beats scissors, you win!";
  
    }  else {
-    return "Equal! Play again!";
+    roundResult.textContent = "Equal! Play again!";
  }};
