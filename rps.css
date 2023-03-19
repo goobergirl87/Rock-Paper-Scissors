@@ -4,3 +4,11 @@ body {
     background-color: rgb(255, 119, 60);
     align-content: space-between;
 }
+
+h1 {
+    text-align: center;
+    font-family:monospace;
+    font-size: 80px;
+    font-weight: 100;
+    color:blanchedalmond;
+}
