@@ -21,6 +21,7 @@ const container2 = document.querySelector('#container2');
 const roundResult = document.createElement('div');
 roundResult.classList.add('roundResult');
 container2.appendChild(roundResult);
+roundResult.setAttribute('style','font-family: monospace; font-size: 30px; color:rgb(230, 0, 126); margin: 20px');
 
 const score = document.createElement('div');
 score.classList.add('score');
