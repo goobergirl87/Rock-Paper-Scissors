@@ -31,6 +31,7 @@ score.setAttribute('style','font-family: monospace; font-size: 20px; color:blanc
 const finish = document.createElement('div');
 finish.classList.add('finish');
 container2.appendChild(finish);
+finish.setAttribute('style','font-family: monospace; font-size: 20px; color:blanchedalmond; background-color: rgb(230, 0, 126); margin: 20px');
 
 const playerSelection1 = document.querySelectorAll('rock');
 rock.addEventListener('click', getComputerChoice)
