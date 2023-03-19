@@ -99,7 +99,7 @@ function scissorsSelection () {
  
  } else if  (computerSelection === "paper") {
      playerPoints += 1
-     roundResult.textContent = "paper beats scissors, you win!";
+     roundResult.textContent = "scissors beats paper, you win!";
  
    }  else {
     roundResult.textContent = "Equal! Play again!";
